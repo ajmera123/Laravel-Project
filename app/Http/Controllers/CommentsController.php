@@ -26,13 +26,12 @@ class CommentsController extends Controller
     public function index()
     {
     	$users = \App\User::all();
-        return $users;
-    	// foreach ($users as $user) {
-    	// 	echo $user->name . '<br>';
-    	// 	foreach ($user->comments as $comment) {
-    	// 		echo $comment->commented_txt . '<br>';
-    	// 	}
-    	// }
-
+        // return $users;
+    	foreach ($users as $user) {
+    		echo $user->name . '<br>';
+    		foreach ($user->comments as $comment) {
+    			echo $comment->commented_txt . '<br>';
+    		}
+    	}
     }
 }
